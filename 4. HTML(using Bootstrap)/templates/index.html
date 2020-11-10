@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>A.E.I.O.U - 전기자동차 충전소 추천 서비스</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/static/image/main.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="static/assets/mail/jqBootstrapValidation.js"></script>
+        <script src="static/assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="static/js/scripts.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+        <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+        
+        <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">A.E.I.O.U</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">전기자동차 충전소 추천 서비스</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="/static/image/electric-car.png" alt="" />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">EV Charging Station</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">AnyTime. AnyWhere.</p>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">전기자동차 충전소 추천 서비스</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <h4 class="masthead-subheading text-center text-uppercase text-secondary mb-0">When & Where do you plan to go?</h4>
+                <!-- Portfolio Grid Items-->
+                <form action="/save_map" method="POST" enctype="multipart/form-data">
+                <br><br><br>
+                    <div class="row">
+                        <h5 class="masthead-subheading text-center text-uppercase text-secondary mb-0">날짜&nbsp;&nbsp;&nbsp;</h5>
+                        <select class="selectpicker" name="year">
+                            <option value="">year</option>
+                            <option name="year" value="2020">2020</option>
+                            <option name="year" value="2021">2021</option>
+                        </select>
+                        <div>&nbsp;&nbsp;&nbsp;</div>
+                        <select class="selectpicker" name="month" >
+                            <option value="">month</option>
+                            <option name="month" value="1">1</option>
+                            <option name="month" value="2">2</option>
+                            <option name="month" value="3">3</option>
+                            <option name="month" value="4">4</option>
+                            <option name="month" value="5">5</option>
+                            <option name="month" value="6">6</option>
+                            <option name="month" value="7">7</option>
+                            <option name="month" value="8">8</option>
+                            <option name="month" value="9">9</option>
+                            <option name="month" value="10">10</option>
+                            <option name="month" value="11">11</option>
+                            <option name="month" value="12">12</option>
+                        </select>
+                    <div>&nbsp;&nbsp;&nbsp;</div>
+                        <select class="selectpicker" name="date">
+                            <option value="">date</option>
+                            <option name="date" value="1">1</option>
+                            <option name="date" value="2">2</option>
+                            <option name="date" value="3">3</option>
+                            <option name="date" value="4">4</option>
+                            <option name="date" value="5">5</option>
+                            <option name="date" value="6">6</option>
+                            <option name="date" value="7">7</option>
+                            <option name="date" value="8">8</option>
+                            <option name="date" value="9">9</option>
+                            <option name="date" value="10">10</option>
+                            <option name="date" value="11">11</option>
+                            <option name="date" value="12">12</option>
+                            <option name="date" value="13">13</option>
+                            <option name="date" value="14">14</option>
+                            <option name="date" value="15">15</option>
+                            <option name="date" value="16">16</option>
+                            <option name="date" value="17">17</option>
+                            <option name="date" value="18">18</option>
+                            <option name="date" value="19">19</option>
+                            <option name="date" value="20">20</option>
+                            <option name="date" value="21">21</option>
+                            <option name="date" value="22">22</option>
+                            <option name="date" value="23">23</option>
+                            <option name="date" value="24">24</option>
+                            <option name="date" value="25">25</option>
+                            <option name="date" value="26">26</option>
+                            <option name="date" value="27">27</option>
+                            <option name="date" value="28">28</option>
+                            <option name="date" value="29">29</option>
+                            <option name="date" value="30">30</option>
+                            <option name="date" value="31">31</option>
+                        </select>    
+                    <div>&nbsp;&nbsp;&nbsp;</div>
+                    <select class="selectpicker" name="day">
+                        <option value="">day</option>
+                        <option name="day" value="0">월</option>
+                        <option name="day" value="1">화</option>
+                        <option name="day" value="2">수</option>
+                        <option name="day" value="3">목</option>
+                        <option name="day" value="4">금</option>
+                        <option name="day" value="5">토</option>
+                        <option name="day" value="6">일</option>
+                    </select>
+                    <div>&nbsp;&nbsp;&nbsp;</div>
+                </div>
+                    <br>
+                    <div class="row">
+                        <h5 class="masthead-subheading text-center text-uppercase text-secondary mb-0">시간&nbsp;&nbsp;&nbsp;</h5>
+                        <select class="selectpicker" name="times">
+                            <option value="">time</option>
+                            <option name="times" value="1">1</option>
+                            <option name="times" value="2">2</option>
+                            <option name="times" value="3">3</option>
+                            <option name="times" value="4">4</option>
+                            <option name="times" value="5">5</option>
+                            <option name="times" value="6">6</option>
+                            <option name="times" value="7">7</option>
+                            <option name="times" value="8">8</option>
+                            <option name="times" value="9">9</option>
+                            <option name="times" value="10">10</option>
+                            <option name="times" value="11">11</option>
+                            <option name="times" value="12">12</option>
+                            <option name="times" value="13">13</option>
+                            <option name="times" value="14">14</option>
+                            <option name="times" value="15">15</option>
+                            <option name="times" value="16">16</option>
+                            <option name="times" value="17">17</option>
+                            <option name="times" value="18">18</option>
+                            <option name="times" value="19">19</option>
+                            <option name="times" value="20">20</option>
+                            <option name="times" value="21">21</option>
+                            <option name="times" value="22">22</option>
+                            <option name="times" value="23">23</option>
+                            <option name="times" value="24">24</option>
+                        </select>
+                        <div>&nbsp;&nbsp;&nbsp;</div>
+                </div>
+                <br>
+                <div class="row">
+                    <h5 class="masthead-subheading text-center text-uppercase text-secondary mb-0">장소&nbsp;&nbsp;&nbsp;</h5>
+                    <select onchange="changeGu()" class="selectpicker" name="city" id="city">
+                        <option value="" >city</option>
+                        <option name="city" value="j">제주시</option>
+                        <option name="city" value="s">서귀포시</option>
+                    </select>
+
+                    <select id="gu" class="selectpicker" name="gu">
+                        <option value="">gu</option>
+                        <optgroup label="제주시">
+                            <option name="gu" value="건입동">건입동</option>
+                            <option name="gu" value="구좌읍">구좌읍</option>
+                            <option name="gu" value="노형동">노형동</option>
+                            <option name="gu" value="도남동">도남동</option>
+                            <option name="gu" value="도두1동">도두1동</option>
+                            <option name="gu" value="도련2동">도련2동</option>
+                            <option name="gu" value="봉개동">봉개동</option>
+                            <option name="gu" value="삼도2도">삼도2도</option>
+                            <option name="gu" value="삼양2동">삼양2동</option>
+                            <option name="gu" value="아라1동">아라1동</option>
+                            <option name="gu" value="아라2동">아라2동</option>
+                            <option name="gu" value="아라동">아라동</option>
+                            <option name="gu" value="애월읍">애월읍</option>
+                            <option name="gu" value="연동">연동</option>
+                            <option name="gu" value="영평동">영평동</option>
+                            <option name="gu" value="오등동">오등동</option>
+                            <option name="gu" value="오라1동">오라1동</option>
+                            <option name="gu" value="오라2동">오라2동</option>
+                            <option name="gu" value="외도1동">외도1동</option>
+                            <option name="gu" value="용강동">용강동</option>
+                            <option name="gu" value="용담1동">용담1동</option>
+                            <option name="gu" value="용담2동">용담2동</option>
+                            <option name="gu" value="이도1동">이도1동</option>
+                            <option name="gu" value="이도2동">이도2동</option>
+                            <option name="gu" value="일도2동">일도2동</option>
+                            <option name="gu" value="추자면">추자면</option>
+                            <option name="gu" value="한경면">한경면</option>
+                            <option name="gu" value="한림읍">한림읍</option>
+                            <option name="gu" value="해안동">해안동</option>
+                            <option name="gu" value="화북1동">화북1동</option>
+                        </optgroup>
+                        <optgroup label="서귀포시">
+                            <option name="gu" value='강정동'>강정동</option>
+                            <option name="gu" value="남원읍">남원읍</option>
+                            <option name="gu" value="대정읍">대정읍</option>
+                            <option name="gu" value="동홍동">동홍동</option>
+                            <option name="gu" value="보목동">보목동</option>
+                            <option name="gu" value="법환동">법환동</option>
+                            <option name="gu" value="상예동">상예동</option>
+                            <option name="gu" value="상효동">상효동</option>
+                            <option name="gu" value="색달동">색달동</option>
+                            <option name="gu" value="서귀동">서귀동</option>
+                            <option name="gu" value="성산읍">성산읍</option>
+                            <option name="gu" value="서호동">서호동</option>
+                            <option name="gu" value="서홍동">서홍동</option>
+                            <option name="gu" value="안덕면">안덕면</option>
+                            <option name="gu" value="표선면">표선면</option>
+                            <option name="gu" value="중문동">중문동</option>
+                            <option name="gu" value="토평동">토평동</option>
+                            <option name="gu" value="하효동">하효동</option>
+                            <option name="gu" value="회수동">회수동</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center"><button type="submit" class="btn btn-primary">실행</button>&nbsp;&nbsp;&nbsp;
+                <button type="reset" class="btn btn-secondary">취소</button></div>
+                </div>
+                <br>
+            </form>
+            <br>
+            <br>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">About A.E.I.O.U</h4>
+                        <p class="lead mb-0">
+                            - Anywhere, Anytime<BR>
+                            - Ev charging station&nbsp;<BR>
+                            - Intelligent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>
+                            - Optimal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>
+                            - (for) U&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Our Service</h4>
+                        <p class="lead mb-0">
+                            Our Service is to recommend to Electric vehicel users the optimal ev charging station when they want to charge. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright © VISION Website 2020</small></div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="static/assets/mail/jqBootstrapValidation.js"></script>
+        <script src="static/assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="static/js/scripts.js"></script>
+    </body>
+</html>
